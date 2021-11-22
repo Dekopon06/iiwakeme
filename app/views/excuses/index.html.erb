@@ -1,0 +1,23 @@
+<main class="main">
+  <div class="inner">
+   <%= link_to image_tag("title_logo.png", class: :title_logo), root_path %>
+  </div>
+  <div class="inner">
+      <%= link_to "遅刻します", root_path, class: :excuse__btn %>
+    <% if user_signed_in? %> 
+      <%= link_to "いいわけ作成", new_excuse_path, class: :excuse__btn %>
+      <%= link_to "お気に入り", root_path, class: :excuse__btn %>
+    <% end %>  
+  </div>
+
+    <%# ログインしているときは以下を表示する %>
+      <%# <div class="greeting"> %>
+        <%# <% こんにちは %> 
+        <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
+      <%# </div> %>
+    <%# // ログインしているときは上記を表示する %>
+    <div class="card__wrapper">
+      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+    </div>
+  </div>
+</main>
