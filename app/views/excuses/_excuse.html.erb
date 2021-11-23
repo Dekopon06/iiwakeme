@@ -1,0 +1,40 @@
+<div class="card" >
+
+</div>
+
+
+    <ul class='excuse-lists'> 
+      <% @excuse.each do |excuse| %>  
+        <li class='list' >
+
+  <div class="box26">
+      <span class="box-title">
+      <%= "#{current_user.nickname}" %>
+      <%= "#{current_user.age.name}" %>
+      <%= "#{current_user.sex.name}" %>
+      <%= "#{current_user.job.name}" %>
+      </span>
+      <%# 本文の記述 %>
+      <p><%= "遅刻の理由" %></p>
+  </div>
+
+         <%# <%= user.user_nickname %> 
+         </li>
+      <% end %>
+    </ul>
+        <%# </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= item.item_name %>
+          <%# </h3>
+          <div class='item-price'>
+            <%# <span><%= item.price円<br><%= item.charge.name</span> %>
+            <%# <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <%# <span class='star-count'>0</span>
+            </div> %> 
+          <%# </div>
+        </div>
+        <% end %>
+      <%# </li>
+     <% end %>

@@ -1,19 +1,24 @@
-<%= form_with model: @excuse, local: true do |f|%>
+<%= form_with model: @excuse, url: excuses_path, local: true do |f|%>
+
   <div class="field">
     <%= f.label :reason, "理由" %><br />
-    <%= f.text_field :hoge, id:"prototype_title" %>
+    <%= f.text_field :reason, id:"excuse_reason" %>
   </div>
 
   <div class="field">
     <%= f.label :behind_time_id, "期間" %><br />
-    <%= f.collection_select(:behind_time_id, Behind_time.all, :id, :name, {}, {class:"select-box", id:"excuse_time"}) %> 
+    <%= f.collection_select(:behind_time_id, BehindTime.all, :id, :name, {}, {class:"select-box", id:"excuse_time"}) %> 
   </div>
 
   <div class="field">
     <%= f.label :result, "結果" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_concept" %>
+    <%= f.text_field :result, id:"excuse_result" %>
   </div>
 
+   <div class="tag-field", id='tag-field'>
+    <%= f.label :name, "タグ" %><br />
+    <%= f.text_field :name, id:"excuse_tag" %>
+  </div>
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
