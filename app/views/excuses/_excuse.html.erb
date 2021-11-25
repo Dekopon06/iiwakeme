@@ -1,27 +1,36 @@
-<div class="card" >
+    <% if user_signed_in? %>
+<script src="copy.js"></script>
+ <div class="card" >
+ <ul class='excuse-lists'> 
+      <% @excuse.each do |excuse| %>  
+    <li class='list' >
 
+     <div class="box26">
+      <span class="box-title">
+        <%= "#{current_user.nickname}" %> 
+        <%= "#{current_user.age.name}" %>
+        <%= "#{current_user.sex.name}" %>
+        <%= "#{current_user.job.name}" %>
+      </span>
+       <%# 本文の記述 %> 
+      <div class="excuse_text">
+        <%= "#{excuse.reason}"  "#{excuse.behind_time.name}" "#{excuse.result}" %>      
+        <button class="copy_excuse__btn">コピー</button>
+     </div> 
+     <div class="copy_excuse__btn">   
+       <% if current_user.already_bookmark?(excuse) %>
+       <%= link_to 'お気に入りから外す', excuse_bookmarks_path(excuse), method: :delete %>
+       <% else %>
+       <%= link_to 'お気に入り', excuse_bookmarks_path(excuse), method: :post %>
+       <% end %>
+       <%= excuse.bookmarks.count %>
+     </div>
+    </li>
+   <% end %>
+ </ul>
 </div>
 
-
-    <ul class='excuse-lists'> 
-      <% @excuse.each do |excuse| %>  
-        <li class='list' >
-
-  <div class="box26">
-      <span class="box-title">
-      <%= "#{current_user.nickname}" %>
-      <%= "#{current_user.age.name}" %>
-      <%= "#{current_user.sex.name}" %>
-      <%= "#{current_user.job.name}" %>
-      </span>
-      <%# 本文の記述 %>
-      <p><%= "遅刻の理由" %></p>
-  </div>
-
-         <%# <%= user.user_nickname %> 
-         </li>
-      <% end %>
-    </ul>
+<% end %>
         <%# </div>
         <div class='item-info'>
           <h3 class='item-name'>

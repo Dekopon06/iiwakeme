@@ -2,19 +2,17 @@
   <div class="inner">
    <%= link_to image_tag("title_logo.png", class: :title_logo), root_path %>
   </div>
-  <div class="inner">
+ 
+
+  <div class="inner2">
       <%= link_to "遅刻します", root_path, class: :excuse__btn %>
     <% if user_signed_in? %> 
       <%= link_to "いいわけ作成", new_excuse_path, class: :excuse__btn %>
       <%= link_to "お気に入り", root_path, class: :excuse__btn %>
     <% end %>  
   </div>
-
   <div class="card__wrapper">
       <%# 言い訳一覧の表示 %>
       <%= render partial: "excuse", locals: { excuse: @excuse } %>
-                                <%# collection: @excuse  %>
-
   </div>
-
-</main>
+</main> 

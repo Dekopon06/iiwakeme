@@ -2,6 +2,12 @@ class ExcusesController < ApplicationController
 
   def index
     @excuse = Excuse.order("created_at DESC")
+    @user = User.all
+   #  order("created_at DESC")
+  end
+
+  def show
+   @excuse = Excuse.find(params[:id])
   end
 
   def new
@@ -10,6 +16,7 @@ class ExcusesController < ApplicationController
 
   def create
     @excuse = ExcusesTag.new(excuse_params)
+
    if @excuse.valid?
       @excuse.save
       return redirect_to root_path

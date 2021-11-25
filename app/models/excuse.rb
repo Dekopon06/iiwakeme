@@ -1,5 +1,7 @@
 class Excuse < ApplicationRecord
   belongs_to :user
+
+  has_many :bookmarks, dependent: :destroy
   has_many :excuse_tag_relations
   has_many :tags, through: :excuse_tag_relations
 
