@@ -1,24 +1,58 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション名
+"言い訳名鑑"
 
-Things you may want to cover:
+## アプリケーション概要 このアプリケーションでできること
+ * 言い訳作成
+ * ユーザーの作成した言い訳のコピー
+ * お気に入り、タグ付け機能
 
-* Ruby version
+## URL
+ "https://iiwakeme.herokuapp.com/"
 
-* System dependencies
+## テスト用アカウント
+ * メールアドレス:  test_user@gmail.com
+ * パスワード: test_user
+ * 年齢: 10代
+ * 性別: 男性
+ * 職業: 学生
 
-* Configuration
+## 利用方法
+* 使用者が、自分のした失敗・過失について、そうならざるを得なかった事情を客観的に説明して、相手の了解を得ようとする際、他投稿者の投稿内容を参考に、思考の助けとしてご利用ください。
+* 悪質な投稿、誹謗中傷、及びそれに準ずる意図を示唆する内容の投稿を禁止しています。
 
-* Database creation
 
-* Database initialization
+## 目指した課題解決
+円滑なコミュニケーション機会の増加
 
-* How to run the test suite
+## 洗い出した要件
+* 言い訳作成・投稿機能
+* ユーザーログイン機能
+* タグ付け機能
+* お気に入り機能
 
-* Services (job queues, cache servers, search engines, etc.)
+## 実装した機能についての画像やGIFおよびその説明
 
-* Deployment instructions
 
-* ...
+## 実装予定の機能
+タグ検索機能
+お気に入りソート機能
+
+
+## データベース設計
+
+## ローカルでの動作方法
+
+WebブラウザGoogle Chromeの最新版を利用してアクセスしてください。
+ただしデプロイ等で接続できないタイミングもございます。その際は少し時間をおいてから接続してください。
+
+接続先およびログイン情報については、上記の通りです。
+同時に複数の方がログインしている場合に、ログインできない可能性があります。
+テストアカウントでログイン→トップページから言い訳作成押下→投稿情報入力→投稿
+確認後、ログアウト処理をお願いします。
+
+
+開発環境
+Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
+

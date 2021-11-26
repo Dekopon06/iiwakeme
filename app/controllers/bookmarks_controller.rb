@@ -15,4 +15,5 @@ class BookmarksController < ApplicationController
   # ("/excuses/#{params[:excuse_id]}")
  end
 
+
 end 

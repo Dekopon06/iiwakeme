@@ -2,12 +2,11 @@ class ExcusesController < ApplicationController
 
   def index
     @excuse = Excuse.order("created_at DESC")
-    @user = User.all
+    @user = User.order("created_at DESC")
    #  order("created_at DESC")
   end
 
   def show
-   @excuse = Excuse.find(params[:id])
   end
 
   def new
