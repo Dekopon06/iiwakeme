@@ -15,6 +15,5 @@ class ApplicationController < ActionController::Base
     end
   end
   
-# test
 
 end
